@@ -4,22 +4,31 @@
     background-color: #fec23d
 }
 
-tr.hide-table-padding td {
-    padding: 0;
+.producte {
+    padding-bottom: 15px !important;
+    background-color: #FFDB84 !important;
+    font-size: 12px;
 }
 
-.expand-button {
-    position: relative;
+.producte-title {
+    background-color: #FFB400 !important;
 }
 
-.accordion-toggle .expand-button:after {
-    position: absolute;
-    left: .75rem;
-    top: 50%;
-    transform: translate(0, -50%);
-    content: '-';
+.col {
+    background-color: #fec23d
 }
 
-.accordion-toggle.collapsed .expand-button:after {
-    content: '+';
+.client {
+    padding-bottom: 20px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box div {
+    width: 100px;
+    height: 100px;
 }
