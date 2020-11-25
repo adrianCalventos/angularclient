@@ -1,0 +1,33 @@
+<div class="card my-5">
+    <div class="card-body">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let customer of customers; let i = index ">
+                <tr class="accordion-toggle collapsed" id="accordion1" data-toggle="collapse" data-parent="#accordion1" href="#collapse">
+                    <td>{{ customer.customer_id }}</td>
+                    <td>{{ customer.givenName }}</td>
+                    <td><a href="mailto:{{ customer.email }}">{{ customer.email }}</a></td>
+                </tr>
+                <!--         <tr *ngFor="let product of customer.products">
+        
+          <td>{{ product.productName}}</td>
+        </tr> -->
+
+                <td colspan="3">
+                    <div id="collapseOne" class="collapse in p-3">
+                        <div class="row" *ngFor="let product of customer.products">
+                            <div class="col-2">{{product.productName}}</div>
+                            <div class="col-6">value 1</div>
+                        </div>
+                    </div>
+                </td>
+            </tbody>
+        </table>
+    </div>
+</div>
