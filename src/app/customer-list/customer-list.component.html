@@ -3,26 +3,33 @@
         <table class="table table-bordered table-striped">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">#</th>
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>
+                    <th scope="col">NIF</th>
+                    <th scope="col">Número de document</th>
                 </tr>
             </thead>
             <tbody *ngFor="let customer of customers; let i = index " class="client">
                 <tr>
-                    <td>{{ customer.customer_id }}</td>
+
                     <td>{{ customer.givenName }}</td>
                     <td><a href="mailto:{{ customer.email }}">{{ customer.email }}</a></td>
+                    <td>{{customer.nif}}</td>
+                    <td>{{customer.docNum}}</td>
                 </tr>
                 <div class="box">
                     <tr class="producte-title" *ngIf="customer.products.length!=0">
-                        <th>Nom producte</th>
-                        <th>tipus de producte</th>
+                        <td>Nom producte</td>
+                        <td>tipus de producte</td>
+                        <td>Numeració terminal</td>
+                        <td>Data de venda</td>
                     </tr>
                     <tr class="producte" *ngFor="let product of customer.products">
 
                         <td>{{product.productName}}</td>
                         <td>{{product.productTypeName}}</td>
+                        <td>{{product.numeracioTerminal}}</td>
+                        <td>{{product.soldAt}}</td>
 
                     </tr>
                 </div>

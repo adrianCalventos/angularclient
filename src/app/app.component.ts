@@ -12,7 +12,6 @@ export class AppComponent {
   constructor(private customerService: CustomerService){}
   ngOnInit() {
     this.customerService.findAll().subscribe(res =>{
-      
     })
   }
 }
